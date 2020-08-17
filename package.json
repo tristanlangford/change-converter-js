@@ -1,0 +1,23 @@
+{
+  "name": "change-converter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "istanbul cover --include-all-sources jasmine-node test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tristanlangford/change-converter-js.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tristanlangford/change-converter-js/issues"
+  },
+  "homepage": "https://github.com/tristanlangford/change-converter-js#readme",
+  "dependencies": {
+    "istanbul": "^0.4.5",
+    "jasmine-node": "^3.0.0"
+  }
+}
