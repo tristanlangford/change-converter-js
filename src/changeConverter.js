@@ -1,7 +1,7 @@
 (function(exports) {
 
-    function changeConverter() {
-        return []
+    function changeConverter(amount) {
+        return [`£${amount}`]
     }
 
 

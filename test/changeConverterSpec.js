@@ -6,4 +6,8 @@ describe('change converter', function() {
         expect(changeConverter() instanceof Array).toBeTruthy()
     })
 
+    it('will return £1 when £1 entered', function() {
+        expect(changeConverter(1.00)).toEqual(['£1'])
+    })
+
 })
