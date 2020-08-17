@@ -10,4 +10,8 @@ describe('change converter', function() {
         expect(changeConverter(1.00)).toEqual(['£1'])
     })
 
+    it('will return £1 & £1 when £2 entered', function() {
+        expect(changeConverter(2.00)).toEqual(['£1', '£1'])
+    })
+
 })
