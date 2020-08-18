@@ -14,4 +14,8 @@ describe('changeTotaller', function() {
         expect(changeTotaller(['2p', '1p'])).toEqual('3p')
     })
 
+    it('handles both notes & coins', function() {
+        expect(changeTotaller(['£100', '£100', '2p', '20p'])).toEqual('£200.22')
+    })
+
 })
