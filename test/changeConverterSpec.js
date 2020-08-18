@@ -15,8 +15,13 @@ describe('change converter', function() {
     })
 
     it('will handle large values', function() {
-        var change = ['£100', '£20', '£1', '£1', '£1', '50p', '5p', '1p']
-        expect(changeConverter(123.56)).toEqual(change)
+        var change = ['£100', '£20']
+        expect(changeConverter(120)).toEqual(change)
+    })
+
+    it('handles pence format', function() {
+        var change = ['£100', '£20', '£1', '£1', '£1', '50p', '2p', '2p']
+        expect(changeConverter(123.54)).toEqual(change)
     })
 
 })

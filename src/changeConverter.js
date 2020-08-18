@@ -1,5 +1,9 @@
 (function(exports) {
 
+    let total
+
+    let change 
+
     const changeOptions = [
         100.00,
         50.00,
@@ -14,10 +18,6 @@
         0.02,
         0.01
     ]
-
-    let total
-
-    let change 
 
     function changeConverter(amount = 0) {
         change = []
@@ -42,7 +42,6 @@
                 total -= changeOptions[index]
                 total = total.toFixed(2)
     }
-
 
     module.exports = changeConverter
 })(this)
