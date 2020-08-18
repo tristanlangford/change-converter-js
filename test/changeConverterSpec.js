@@ -15,7 +15,7 @@ describe('change converter', function() {
     })
 
     it('will handle large values', function() {
-        var change = ['£100', '£20', '£1', '£1', '£1', '£0.5', '£0.05', '£0.01']
+        var change = ['£100', '£20', '£1', '£1', '£1', '50p', '5p', '1p']
         expect(changeConverter(123.56)).toEqual(change)
     })
 

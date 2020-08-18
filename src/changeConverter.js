@@ -38,8 +38,8 @@
         }
     }
 
-    function formatChange(integer) {
-        return `£${integer}`
+    function formatChange(float) {
+        return float >= 1 ? `£${float}` : `${float * 100}p`
     }
 
 
