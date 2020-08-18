@@ -26,10 +26,12 @@
     function convertAmountToChange(amount) {
         var total = parseFloat(amount)
         var index = 0
-        while (total !== 0) {
+        while (total > 0.009) {
+            console.log(total)
             if (total >= changeOptions[index]) {
                 change.push(formatChange(changeOptions[index]))
                 total -= changeOptions[index]
+                total = total.toFixed(2)
             } else {
                 index ++
             }
