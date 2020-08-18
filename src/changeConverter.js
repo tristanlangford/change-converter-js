@@ -16,7 +16,7 @@
     ]
 
     let total
-    
+
     let change 
 
     function changeConverter(amount = 0) {
@@ -28,7 +28,7 @@
     function convertAmountToChange(amount) {
         total = parseFloat(amount)
         var index = 0
-        while (total > 0.009) {
+        while (total > 0) {
             total >= changeOptions[index] ? addChange(index) : index ++
         }
     }
