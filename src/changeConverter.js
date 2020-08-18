@@ -15,6 +15,8 @@
         0.01
     ]
 
+    let total
+    
     let change 
 
     function changeConverter(amount = 0) {
@@ -24,22 +26,21 @@
     }
 
     function convertAmountToChange(amount) {
-        var total = parseFloat(amount)
+        total = parseFloat(amount)
         var index = 0
         while (total > 0.009) {
-            console.log(total)
-            if (total >= changeOptions[index]) {
-                change.push(formatChange(changeOptions[index]))
-                total -= changeOptions[index]
-                total = total.toFixed(2)
-            } else {
-                index ++
-            }
+            total >= changeOptions[index] ? addChange(index) : index ++
         }
     }
 
     function formatChange(float) {
         return float >= 1 ? `£${float}` : `${float * 100}p`
+    }
+
+    function addChange(index) {
+        change.push(formatChange(changeOptions[index]))
+                total -= changeOptions[index]
+                total = total.toFixed(2)
     }
 
 
