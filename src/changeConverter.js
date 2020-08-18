@@ -39,8 +39,11 @@
 
     function addChange(index) {
         change.push(formatChange(changeOptions[index]))
-                total -= changeOptions[index]
-                total = total.toFixed(2)
+        updateTotal(index)
+    }
+
+    function updateTotal(index) {
+        total = (total - changeOptions[index]).toFixed(2)
     }
 
     module.exports = changeConverter
