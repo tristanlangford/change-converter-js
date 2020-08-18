@@ -33,8 +33,8 @@
         }
     }
 
-    function formatChange(float) {
-        return float >= 1 ? `£${float}` : `${float * 100}p`
+    function formatChange(number) {
+        return number >= 1 ? `£${number}` : `${number * 100}p`
     }
 
     function addChange(index) {
