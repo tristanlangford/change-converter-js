@@ -4,20 +4,28 @@
 
     function changeTotaller(change) {
         total = 0
+        getTotal(change)
+        return formatTotal()
+    }
+
+    function getTotal(change) {
         for (let i = 0; i < change.length; i++) {
             change[i].includes('p') ? total += converPenceToFloat(change[i]) : total += covertNoteToInteger(change[i])
         }
-        return total >= 1 ? `£${total}` : `${total * 100}p`
     }
 
     function covertNoteToInteger(note) {
-        var number = note.substring(1)
-        return parseInt(number)
+        var note = note.substring(1)
+        return parseInt(note)
     }
 
-    function converPenceToFloat(pence) {
-        var float = pence.slice(0, -1)
-        return parseFloat(float / 100)
+    function converPenceToFloat(coin) {
+        var coin = coin.slice(0, -1)
+        return parseFloat(coin / 100)
+    }
+
+    function formatTotal() {
+        return total >= 1 ? `£${total}` : `${total * 100}p`
     }
 
 
