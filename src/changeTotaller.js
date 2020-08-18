@@ -7,7 +7,7 @@
         for (let i = 0; i < change.length; i++) {
             change[i].includes('p') ? total += converPenceToFloat(change[i]) : total += covertNoteToInteger(change[i])
         }
-        return `£${total}`
+        return total >= 1 ? `£${total}` : `${total * 100}p`
     }
 
     function covertNoteToInteger(note) {

@@ -11,7 +11,7 @@ describe('changeTotaller', function() {
     })
 
     it('totals coins', function() {
-        expect(changeTotaller(['2p', '1p'])).toEqual('£0.03')
+        expect(changeTotaller(['2p', '1p'])).toEqual('3p')
     })
 
 })
