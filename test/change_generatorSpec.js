@@ -1,8 +1,8 @@
 var ChangeGenerator = require('../src/change_generator')
 
-describe('change_generator', function() {
+describe('ChangeGenerator', function() {
     var changeConverter = function(array) { return "called" }
-    let changeTotaller = function() {}
+    let changeTotaller = function(array) { return "called" }
     let changeGenerator 
 
     beforeEach(function() {
@@ -11,6 +11,10 @@ describe('change_generator', function() {
 
     it('calls on changeConverter', function() {
         expect(changeGenerator.convert(['£10'])).toEqual("called")
+    })
+
+    it('calls on changeTotaller', function() {
+        expect(changeGenerator.total(['£10'])).toEqual("called")
     })
 
 })

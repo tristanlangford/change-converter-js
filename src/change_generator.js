@@ -11,6 +11,10 @@ class ChangeGenerator {
         return this._convert(change)
     }
 
+    total(change) {
+        return this._total(change)
+    }
+
 }
 
 module.exports = ChangeGenerator
