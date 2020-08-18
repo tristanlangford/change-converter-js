@@ -28,6 +28,5 @@
         return total >= 1 ? `£${total}` : `${total * 100}p`
     }
 
-
     module.exports = changeTotaller
 })(this)
